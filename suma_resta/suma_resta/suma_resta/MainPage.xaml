@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:suma_resta.ViewModel"
+             x:Class="suma_resta.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ViewModelExpresion></local:ViewModelExpresion>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Suma y Resta" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            
+        </Frame>
+        <Label Text="Ingrese un Numero"></Label>
+        <Entry Text="{Binding Num1}" Keyboard="Numeric" x:Name="n1"></Entry>
+
+        <Label Text="Ingrese un Numero"></Label>
+        <Entry Text="{Binding Num2}" Keyboard="Numeric" x:Name="n2"></Entry>
+
+        <Button Command="{Binding sumar}"  Text="Sumar" ></Button>
+        <Button Command="{Binding restar}" Text="Restar" ></Button>
+        <Button Command="{Binding multiplicar}" Text="Multiplicar"></Button>
+        <Button Command="{Binding dividir}" Text="Dividir" ></Button>
+
+        <Label Text="{Binding Resultado}"></Label>
+      
+      
+    </StackLayout>
+
+</ContentPage>
